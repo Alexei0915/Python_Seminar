@@ -8,6 +8,16 @@
 #     print(num, end = " " )
 #     num += 1
 
-n = int(input("Enter number "))
-for i in range (-n,n + 1):
-    print(i, end= " ")
+# ИЛИ ТАК 
+
+# n = int(input("Enter number "))
+# for i in range (-n,n + 1):
+#     print(i, end= " ")
+
+# Либо вот так 
+
+print ("Enter number")
+
+value = int(input())
+
+print(list (range(- value, value+1)))
