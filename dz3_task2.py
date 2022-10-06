@@ -5,7 +5,7 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-from random import randint
+from random import randrange
 
 
 num = int(input('Введите размер списка '))
@@ -13,7 +13,7 @@ list = []
 list1 = []
 
 for i in range(num):
-    list.append(randint(0, 9))
+    list.append(randrange(0,9))
 
 for i in range(len(list)):
     while i < len(list)/2 and num > len(list)/2:
