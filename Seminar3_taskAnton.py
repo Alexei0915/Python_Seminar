@@ -23,14 +23,39 @@
 # unton
 # """
 
-text ="osfjwoiergwoignaewpjofwoeijfnwfonewfoignewtowenffnoeiwowjfninoiwfen"
-name1=['a','n','t','o','n']
+a = 'anton'
 
-count=0
-for i in name1:
- for j in text:
-    if i ==j:
-        count +=1
-if count >=5:
-    print("да") 
+def find_word_in_string(input_string: str, word: str) -> bool:
+    string = input_string
+    res = ''
+    word = word
+    list_el = []
+    for indx in range(len(word)):
+        if string.find(word[indx]) != -1:
+            list_el.append(word[indx])
+            string = string[string.find(word[indx]):]
+    res = ''.join(list_el)
+    # print(res)
+    # print(res == word)
+    return res == word
+
+
+def test_find_word_in_string():
+    result = find_word_in_string('osfjwoiergwoignaewpjofwoeijfnwfonewfoignewtowenffnoeiwowjfninoiwfen', 'anton')
+    assert result == True, f'Wrong answer: {result} = Test_1'
+    result = find_word_in_string('anton', 'anton')
+    assert result == True, f'Wrong answer: {result} = Test_1'
+    result = find_word_in_string('aoooooooooontooooo', 'anton')
+    assert result == False, f'Wrong answer: {result} = Test_1'
+    result = find_word_in_string('elelelelelelelelelel', 'anton')
+    assert result == False, f'Wrong answer: {result} = Test_1'
+    result = find_word_in_string('253235235a5323352n25235352t253523523235oo235523523523n', 'anton')
+    assert result == True, f'Wrong answer: {result} = Test_1'
+    result = find_word_in_string('antoooooooooooooooooooooooooooooooooooooooooooooooooooon', 'anton')
+    assert result == True, f'Wrong answer: {result} = Test_1'
+    print('All Tests => OK !!!')
+
+
+if __name__ == '__main__':
+    test_find_word_in_string()
   
