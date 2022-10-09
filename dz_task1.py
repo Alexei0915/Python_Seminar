@@ -12,3 +12,5 @@ elif ( dayNumber >7 or dayNumber < 1 ):
       print("это  не день недели")
 else :
      print("этот день не выходной")
+
+
