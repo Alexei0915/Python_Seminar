@@ -1,4 +1,4 @@
-# Bot
+# intelligence bot
 from random import randrange
 
 def input_amount(name):
@@ -12,6 +12,12 @@ def input_amount(name):
 def gamer_output(name, amount, counter, balance):
     print(
         f'ходил {name},взял {amount},на счету {counter},на столе осталось {balance}')
+
+def intelligence(balance):
+    amount = randrange(1,29)
+    while balance-amount <= 28 and balance > 29:
+        amount = randrange(1,29)
+    return amount
 
 
 gamer1 = input("Введите имя игрока 1 > ")
@@ -32,7 +38,7 @@ while balance > 28:
         turn = False
         gamer_output(gamer1, amount, counter1, balance)
     else:
-        amount = randrange(0,28)
+        amount = intelligence(balance)
         counter2 += amount
         balance -= amount
         turn = True
