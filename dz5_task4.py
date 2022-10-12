@@ -1,4 +1,4 @@
-# 
+#  ЗАДАНИЕ И РЕШЕНИЕ НИЖЕ 
 # def encode(s):
  
 #     encoding = "" # сохраняет выходную строку
@@ -23,14 +23,12 @@
  
 #     s = 'dgfdbdzfdzbzdbzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
 #     print(encode(s))
+
+
+
 # Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
 # Входные и выходные данные хранятся в отдельных текстовых файлах.
-# Пример:
-# На сжатие:
-# Входные данные:
-# WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW
-# Входные данные:
-# 12W1B12W3B24W1B14W
+
 
 with open('Gb.txt', 'w') as data:
     data.write('HHHHhwdawdqwdfsdsdsdsdaaadwllllllaaaaammmmaaaaaannn')
