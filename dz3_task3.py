@@ -12,3 +12,4 @@ for i in list:
     if (i - int(i)) >= max:
         max = i - int(i)  
 print(max-min)
+
